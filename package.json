@@ -1,0 +1,59 @@
+{
+	"name": "svelte-preprocess-sass-alias-import",
+	"version": "0.1.0",
+	"description": "🗃 Import external stylesheets with the help of absolute paths.",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "rm -rf ./dist && tsc -p tsconfig.build.json && resolve-tspaths",
+		"clean": "rm -rf ./dist",
+		"prepare": "husky install",
+		"test:watch": "jest --watch",
+		"test": "jest",
+		"lint": "eslint ./src/ --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lucagoslar/sveltekit-sass-alias-import.git"
+	},
+	"keywords": [
+		"sveltekit",
+		"preprocess",
+		"svelte-preprocess",
+		"css",
+		"scss",
+		"sass",
+		"alias",
+		"path",
+		"absolute",
+		"import"
+	],
+	"author": "Luca Goslar <47827429+lucagoslar@users.noreply.github.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/lucagoslar/svelte-preprocess-sass-alias-import/issues"
+	},
+	"homepage": "https://github.com/lucagoslar/svelte-preprocess-sass-alias-import#readme",
+	"devDependencies": {
+		"@types/jest": "^27.4.0",
+		"@types/node": "^17.0.8",
+		"@types/sass": "^1.43.1",
+		"@typescript-eslint/eslint-plugin": "^5.9.1",
+		"@typescript-eslint/parser": "^5.9.1",
+		"eslint": "^8.6.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.4",
+		"jest": "^27.4.7",
+		"jest-extended": "^1.2.0",
+		"prettier": "^2.5.1",
+		"resolve-tspaths": "^0.2.3",
+		"sass": "^1.26.8",
+		"ts-jest": "^27.1.2",
+		"ts-node": "^10.4.0",
+		"typescript": "^4.5.4"
+	}
+}

@@ -1,0 +1,5 @@
+@use '$scss/mixin.scss' as m;
+body {
+	@include m.welcome;
+	color: red;
+}
