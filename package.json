@@ -1,14 +1,16 @@
 {
 	"name": "svelte-preprocess-sass-alias-import",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "🗃 Import external stylesheets with the help of absolute paths.",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.js",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "rm -rf ./dist && tsc -p tsconfig.build.json && resolve-tspaths",
+		"build": "pnpm clean && rollup -c",
+		"build:watch": "pnpm clean && rollup -cw",
 		"clean": "rm -rf ./dist",
 		"prepare": "husky install",
 		"test:watch": "jest --watch",
@@ -29,7 +31,8 @@
 		"alias",
 		"path",
 		"absolute",
-		"import"
+		"import",
+		"vite"
 	],
 	"author": "Luca Goslar <47827429+lucagoslar@users.noreply.github.com>",
 	"license": "MIT",
@@ -38,22 +41,22 @@
 	},
 	"homepage": "https://github.com/lucagoslar/svelte-preprocess-sass-alias-import#readme",
 	"devDependencies": {
-		"@types/jest": "^27.4.0",
-		"@types/node": "^17.0.8",
-		"@types/sass": "^1.43.1",
-		"@typescript-eslint/eslint-plugin": "^5.9.1",
-		"@typescript-eslint/parser": "^5.9.1",
-		"eslint": "^8.6.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-prettier": "^4.0.0",
-		"husky": "^7.0.4",
-		"jest": "^27.4.7",
-		"jest-extended": "^1.2.0",
-		"prettier": "^2.5.1",
-		"resolve-tspaths": "^0.2.3",
-		"sass": "^1.26.8",
-		"ts-jest": "^27.1.2",
-		"ts-node": "^10.4.0",
-		"typescript": "^4.5.4"
+		"@rollup/plugin-typescript": "^8.5.0",
+		"@types/jest": "^29.1.1",
+		"@types/node": "^18.7.23",
+		"@typescript-eslint/eslint-plugin": "^5.38.1",
+		"@typescript-eslint/parser": "^5.38.1",
+		"eslint": "^8.24.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"husky": "^8.0.1",
+		"jest": "^29.1.2",
+		"jest-extended": "^3.1.0",
+		"prettier": "^2.7.1",
+		"rollup": "^2.79.1",
+		"sass": "^1.56.1",
+		"ts-jest": "^29.0.3",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.8.4"
 	}
 }

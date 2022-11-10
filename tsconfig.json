@@ -3,17 +3,17 @@
 		"files": true
 	},
 	"compilerOptions": {
-		"target": "es2016",
-		"module": "commonjs",
+		"module": "esnext",
 		"baseUrl": "./",
 		"paths": {
 			"@src/*": ["src/*"]
 		},
 		"rootDirs": ["./src"],
-		"types": ["node", "ts-jest"],
+		"types": ["node", "jest", "ts-jest"],
+		"moduleResolution": "node",
 		"declaration": true,
-		"declarationMap": false,
-		"sourceMap": false,
+		"declarationMap": true,
+		"sourceMap": true,
 		"outDir": "./dist",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
